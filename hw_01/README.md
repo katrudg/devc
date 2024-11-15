@@ -3,8 +3,8 @@
 
 1. Узнать IP-адрес интерфейса, подключенного к сети Интернет
 ```sh
-[root@slonit ~]# curl ifconfig.me/ip
-93.183.73.57
+[root@slonit ~]# ip address | grep inet | grep -v 127.0.0.1
+    inet 93.183.73.57/24 brd 93.183.73.255 scope global noprefixroute enp0s5
 ```
 
 2. Создать именованный пайп ( named pipe ). Вывести в файл через созданный pipe вывод команды ss -plnt
